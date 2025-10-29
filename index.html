@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>DX Talent Passport™ — Executive Snapshot Card</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script>
+
+        tailwind.config = {
+
+            theme: {
+
+                extend: {
+
+                    colors: {
+
+                        primary: '#4361ee',
+
+                        secondary: '#3a0ca3',
+
+                        accent: '#4cc9f0',
+
+                        success: '#4ade80',
+
+                        warning: '#fbbf24',
+
+                        danger: '#f87171',
+
+                        'bg-dark': '#0f172a',
+
+                        'bg-card': '#1e293b',
+
+                        'text-main': '#f8fafc',
+
+                        'text-dim': '#cbd5e1',
+
+                        'text-light': '#94a3b8',
+
+                    },
+
+                    fontFamily: {
+
+                        'body': ['Inter', 'system-ui', 'sans-serif'],
+
+                        'heading': ['Poppins', 'system-ui', 'sans-serif'],
+
+                    },
+
+                    borderRadius: {
+
+                        'lg': '16px',
+
+                        'md': '12px',
+
+                        'sm': '8px',
+
+                    },
+
+                    backdropBlur: {
+
+                        'xs': '2px',
+
+                    },
+
+                    boxShadow: {
+
+                        'glow': '0 0 20px rgba(67, 97, 238, 0.3)',
+
+                    },
+
+                    animation: {
+
+                        'shimmer': 'shimmer 2s infinite',
+
+                    },
+
+                    keyframes: {
+
+                        shimmer: {
+
+                            '0%': { transform: 'translateX(-100%)' },
+
+                            '100%': { transform: 'translateX(100%)' },
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+<style type="text/css">
+
+body {
+
+background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+
+}
+
+.codeish {
+
+font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+
+}
+
+.passport-wrapper::before {
+
+content: '';
+
+position: absolute;
+
+top: 0;
+
+left: 0;
+
+right: 0;
+
+height: 4px;
+
+background: linear-gradient(90deg, #4361ee, #4cc9f0);
+
+z-index: 10;
+
+}
+
+.id-panel::after {
+
+content: '';
+
+position: absolute;
+
+top: -50%;
+
+right: -50%;
+
+width: 100%;
+
+height: 100%;
+
+background: radial-gradient(circle, rgba(67, 97, 238, 0.1) 0%, transparent 70%);
+
+z-index: 0;
+
+}
+
+.progress-bar-inner::after {
+
+content: '';
+
+position: absolute;
+
+top: 0;
+
+left: 0;
+
+bottom: 0;
+
+width: 100%;
+
+background: linear-gradient(
+
+90deg,
+
+transparent 0%,
+
+rgba(255, 255, 255, 0.3) 50%,
+
+transparent 100%
+
+);
+
+animation: shimmer 2s infinite;
+
+}
+
+tr:hover td {
+
+background-color: rgba(67, 97, 238, 0.05);
+
+}
+
+@media (max-width: 640px) {
+  .section-card {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .section-card table {
+    min-width: 500px;
+  }
+}
+
+</style>
+
+</head>
+
+<body class="font-body text-text-main min-h-screen flex justify-center items-start p-8">
+
+<main class="passport-wrapper w-full max-w-7xl bg-white/10 backdrop-blur-md border border-white/20 rounded-lg shadow-xl shadow-glow p-8 grid grid-cols-1 lg:grid-cols-[320px,1fr] gap-6 relative overflow-hidden">
+
+<!-- LEFT PANEL: identity & trust -->
+
+<aside class="id-panel bg-bg-card border border-white/20 rounded-lg p-6 flex flex-col gap-6 relative overflow-hidden">
+
+<div class="brand-row flex justify-between items-start gap-4 relative z-10">
+
+<div class="brand-left flex flex-col gap-2">
+
+<div class="brand-title font-heading text-xs font-semibold text-accent uppercase tracking-wide flex items-center gap-2">
+
+<span>DX Talent Passport™</span>
+
+<span class="seal-chip inline-flex items-center gap-1 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full text-xs font-semibold py-1 px-2 border border-accent/30 text-accent whitespace-nowrap">
+
+TruID Verified
+
+</span>
+
+</div>
+
+<div class="brand-main font-heading text-xl font-bold text-text-main flex items-center gap-3">
+
+<span>Aisha Rahman</span>
+
+<span class="verify-chip inline-flex items-center gap-1 bg-gradient-to-br from-success to-green-500 text-white rounded-full text-xs font-semibold py-1 px-3 shadow-md shadow-green-500/30">
+
+✅ Verified
+
+</span>
+
+</div>
+
+<div class="brand-sub text-sm text-text-dim">
+
+Executive Snapshot Card
+
+</div>
+
+</div>
+
+<div class="qr-box w-24 h-24 bg-white/10 rounded-md border border-white/20 flex items-center justify-center flex-col text-center text-text-dim p-2 text-xs relative z-10 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+<div>
+
+QR CODE<br />
+
+TruID Scan<br />
+
+Live Record
+
+</div>
+
+</div>
+
+</div>
+
+<section class="id-block bg-white/10 border border-white/20 rounded-md p-5 grid grid-cols-2 gap-4 text-sm relative z-10">
+
+<div>
+
+<div class="id-field-label text-xs text-text-light uppercase tracking-wide mb-1">
+
+Passport ID / TruID Hash
+
+</div>
+
+<div class="id-field-value codeish text-text-main font-medium text-sm bg-black/30 py-1 px-2 rounded border border-white/10 break-all">
+
+TRU-TX98234-MY
+
+</div>
+
+</div>
+
+<div>
+
+<div class="id-field-label text-xs text-text-light uppercase tracking-wide mb-1">
+
+STIFIn Type
+
+</div>
+
+<div class="id-field-value text-text-main font-medium">
+
+F (Feeling)
+
+</div>
+
+</div>
+
+<div>
+
+<div class="id-field-label text-xs text-text-light uppercase tracking-wide mb-1">
+
+Age / Stage
+
+</div>
+
+<div class="id-field-value text-text-main font-medium">
+
+17 (Youth Tier)
+
+</div>
+
+</div>
+
+<div>
+
+<div class="id-field-label text-xs text-text-light uppercase tracking-wide mb-1">
+
+Nationality / Location
+
+</div>
+
+<div class="id-field-value text-text-main font-medium">
+
+Malaysia 🇲🇾
+
+</div>
+
+</div>
+
+<div>
+
+<div class="id-field-label text-xs text-text-light uppercase tracking-wide mb-1">
+
+DirhamX Wallet
+
+</div>
+
+<div class="id-field-value codeish text-text-main font-medium text-sm bg-black/30 py-1 px-2 rounded border border-white/10 break-all">
+
+0xA17F…C291
+
+</div>
+
+</div>
+
+<div>
+
+<div class="id-field-label text-xs text-text-light uppercase tracking-wide mb-1">
+
+Verification Status
+
+</div>
+
+<div class="id-field-value text-text-main font-medium">
+
+Identity attested by TruID
+
+</div>
+
+</div>
+
+</section>
+
+<section class="silver-band bg-gradient-to-br from-white/10 to-slate-400/5 rounded-md border border-white/20 p-4 text-sm leading-relaxed text-text-dim relative z-10">
+
+<strong class="text-text-main font-medium">Data Integrity:</strong> Secured on TruID Ledger.  
+
+Attestations from Employers · Mentors · System Logs.  
+
+Issued by <strong class="text-text-main font-medium">DX Talent™</strong>, powered by <strong class="text-text-main font-medium">DirhamX</strong>.
+
+</section>
+
+</aside>
+
+<!-- RIGHT MAIN CONTENT -->
+
+<section class="grid-main grid gap-6">
+
+<!-- CORE SUMMARY -->
+
+<section class="section-card bg-bg-card border border-white/20 rounded-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+<div class="section-header flex justify-between items-start mb-4 flex-wrap gap-2">
+
+<div class="section-title font-heading text-sm font-semibold text-accent uppercase tracking-wide flex items-center gap-2">
+
+<div class="w-1 h-4 bg-accent rounded-full"></div>
+
+<span>Core Summary</span>
+
+</div>
+
+<div class="section-subtxt text-xs text-text-light leading-relaxed">
+
+Purpose • Talent signal • How you work
+
+</div>
+
+</div>
+
+<div class="one-line-statement font-heading text-base leading-relaxed font-medium text-text-main mb-4 py-3 px-3 bg-primary/10 border-l-4 border-primary rounded-r">
+
+"I design ideas that move people."
+
+</div>
+
+<div class="chips-row flex flex-wrap gap-2 mb-3">
+
+<div class="chip bg-white/10 text-text-main rounded-full text-xs font-medium py-2 px-3 inline-flex items-center gap-1 border border-white/10 transition-all duration-200 hover:bg-primary/20 hover:-translate-y-0.5">
+
+🧠 Critical Thinking
+
+</div>
+
+<div class="chip bg-white/10 text-text-main rounded-full text-xs font-medium py-2 px-3 inline-flex items-center gap-1 border border-white/10 transition-all duration-200 hover:bg-primary/20 hover:-translate-y-0.5">
+
+🎨 Visual Design
+
+</div>
+
+<div class="chip bg-white/10 text-text-main rounded-full text-xs font-medium py-2 px-3 inline-flex items-center gap-1 border border-white/10 transition-all duration-200 hover:bg-primary/20 hover:-translate-y-0.5">
+
+🤝 Team Collaboration
+
+</div>
+
+</div>
+
+<div class="mini-note text-xs text-text-dim leading-relaxed">
+
+STIFIn Insight: Natural empathy leader. Performs best in cooperative environments.
+
+</div>
+
+</section>
+
+<!-- CAPABILITY PROFILE -->
+
+<section class="section-card bg-bg-card border border-white/20 rounded-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+<div class="section-header flex justify-between items-start mb-4 flex-wrap gap-2">
+
+<div class="section-title font-heading text-sm font-semibold text-accent uppercase tracking-wide flex items-center gap-2">
+
+<div class="w-1 h-4 bg-accent rounded-full"></div>
+
+<span>Capability Profile</span>
+
+</div>
+
+<div class="section-subtxt text-xs text-text-light leading-relaxed">
+
+Skills • Level • Proof
+
+</div>
+
+</div>
+
+<div class="table-wrap overflow-x-auto">
+
+<table class="w-full border-collapse text-sm text-text-main">
+
+<thead>
+
+<tr>
+
+<th class="text-left font-semibold text-xs text-text-light uppercase tracking-wide py-3 px-2 border-b border-white/20 whitespace-nowrap">Skill</th>
+
+<th class="text-left font-semibold text-xs text-text-light uppercase tracking-wide py-3 px-2 border-b border-white/20 whitespace-nowrap">Level</th>
+
+<th class="text-left font-semibold text-xs text-text-light uppercase tracking-wide py-3 px-2 border-b border-white/20 whitespace-nowrap">Verified By</th>
+
+<th class="text-left font-semibold text-xs text-text-light uppercase tracking-wide py-3 px-2 border-b border-white/20 whitespace-nowrap">Evidence</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">Graphic Design</td>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">Proficient</td>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">Mentor verified</td>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">
+
+<span class="codeish text-text-main text-xs bg-black/30 py-1 px-2 rounded border border-white/10 break-all">
+
+Canva project link
+
+</span>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">Content Writing</td>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">Intermediate</td>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">AI & mentor verified</td>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">
+
+<span class="codeish text-text-main text-xs bg-black/30 py-1 px-2 rounded border border-white/10 break-all">
+
+Blog post sample
+
+</span>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">Project Management</td>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">Beginner</td>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">System verified</td>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">
+
+<span class="codeish text-text-main text-xs bg-black/30 py-1 px-2 rounded border border-white/10 break-all">
+
+DX Talent task log
+
+</span>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="mini-note text-xs text-text-dim leading-relaxed mt-3">
+
+Proof-of-Skill Hash stored on TruID ledger for verification integrity.
+
+</div>
+
+</section>
+
+<!-- PERFORMANCE RECORD -->
+
+<section class="section-card bg-bg-card border border-white/20 rounded-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+<div class="section-header flex justify-between items-start mb-4 flex-wrap gap-2">
+
+<div class="section-title font-heading text-sm font-semibold text-accent uppercase tracking-wide flex items-center gap-2">
+
+<div class="w-1 h-4 bg-accent rounded-full"></div>
+
+<span>Performance Record</span>
+
+</div>
+
+<div class="section-subtxt text-xs text-text-light leading-relaxed">
+
+Work & Delivery History
+
+</div>
+
+</div>
+
+<div class="table-wrap overflow-x-auto">
+
+<table class="w-full border-collapse text-sm text-text-main">
+
+<thead>
+
+<tr>
+
+<th class="text-left font-semibold text-xs text-text-light uppercase tracking-wide py-3 px-2 border-b border-white/20 whitespace-nowrap">Year</th>
+
+<th class="text-left font-semibold text-xs text-text-light uppercase tracking-wide py-3 px-2 border-b border-white/20 whitespace-nowrap">Organization / Project</th>
+
+<th class="text-left font-semibold text-xs text-text-light uppercase tracking-wide py-3 px-2 border-b border-white/20 whitespace-nowrap">Role</th>
+
+<th class="text-left font-semibold text-xs text-text-light uppercase tracking-wide py-3 px-2 border-b border-white/20 whitespace-nowrap">Outcome</th>
+
+<th class="text-left font-semibold text-xs text-text-light uppercase tracking-wide py-3 px-2 border-b border-white/20 whitespace-nowrap">Verification</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">2025</td>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">Sambal Soodap Kiosk</td>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">Student Designer</td>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">Delivered 12 marketing visuals</td>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">✅ TruID attested</td>
+
+</tr>
+
+<tr>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">2025</td>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">DX Talent Internship</td>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">Digital Assistant</td>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">100% task completion</td>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">✅ Mentor verified</td>
+
+</tr>
+
+<tr>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">2024</td>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">Berkat Bantu</td>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">Volunteer Mentor</td>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">50 students coached</td>
+
+<td class="py-3 px-2 border-b border-white/10 align-top">✅ NGO endorsement</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="metrics-row flex flex-wrap gap-6 text-sm leading-relaxed text-text-main mt-4">
+
+<div class="metric-block flex-1 min-w-[120px] text-center p-4 bg-white/5 rounded-md border border-white/5">
+
+<strong class="text-2xl font-bold text-accent block mb-1">96%</strong>
+
+Delivery Reliability
+
+</div>
+
+<div class="metric-block flex-1 min-w-[120px] text-center p-4 bg-white/5 rounded-md border border-white/5">
+
+<strong class="text-2xl font-bold text-accent block mb-1">18 / 18</strong>
+
+On-Time Completion
+
+</div>
+
+<div class="metric-block flex-1 min-w-[120px] text-center p-4 bg-white/5 rounded-md border border-white/5">
+
+<strong class="text-2xl font-bold text-accent block mb-1">5</strong>
+
+Verified Endorsements
+
+</div>
+
+<div class="metric-block flex-1 min-w-[120px] text-center p-4 bg-white/5 rounded-md border border-white/5">
+
+<strong class="text-2xl font-bold text-accent block mb-1">0%</strong>
+
+Dispute Rate
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CHARACTER & TRUST PROFILE -->
+
+<section class="section-card bg-bg-card border border-white/20 rounded-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+<div class="section-header flex justify-between items-start mb-4 flex-wrap gap-2">
+
+<div class="section-title font-heading text-sm font-semibold text-accent uppercase tracking-wide flex items-center gap-2">
+
+<div class="w-1 h-4 bg-accent rounded-full"></div>
+
+<span>Character & Trust Profile</span>
+
+</div>
+
+<div class="section-subtxt text-xs text-text-light leading-relaxed">
+
+Behaviour • Reliability • Potential
+
+</div>
+
+</div>
+
+<div class="character-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-sm leading-relaxed">
+
+<div class="char-attr bg-white/10 border border-white/20 rounded-md p-4 transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
+
+<div class="char-label text-xs text-text-light uppercase tracking-wide font-semibold mb-2">
+
+Integrity
+
+</div>
+
+<div class="char-score text-text-main font-semibold text-base mb-1">
+
+High
+
+</div>
+
+<div class="mini-note text-xs text-text-dim">
+
+Mentor & project attestations
+
+</div>
+
+</div>
+
+<div class="char-attr bg-white/10 border border-white/20 rounded-md p-4 transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
+
+<div class="char-label text-xs text-text-light uppercase tracking-wide font-semibold mb-2">
+
+Collaboration
+
+</div>
+
+<div class="char-score text-text-main font-semibold text-base mb-1">
+
+Excellent
+
+</div>
+
+<div class="mini-note text-xs text-text-dim">
+
+Peer and team feedback
+
+</div>
+
+</div>
+
+<div class="char-attr bg-white/10 border border-white/20 rounded-md p-4 transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
+
+<div class="char-label text-xs text-text-light uppercase tracking-wide font-semibold mb-2">
+
+Responsibility
+
+</div>
+
+<div class="char-score text-text-main font-semibold text-base mb-1">
+
+High
+
+</div>
+
+<div class="mini-note text-xs text-text-dim">
+
+Attendance & punctuality logs
+
+</div>
+
+</div>
+
+<div class="char-attr bg-white/10 border border-white/20 rounded-md p-4 transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
+
+<div class="char-label text-xs text-text-light uppercase tracking-wide font-semibold mb-2">
+
+Leadership Potential
+
+</div>
+
+<div class="char-score text-text-main font-semibold text-base mb-1">
+
+Emerging
+
+</div>
+
+<div class="mini-note text-xs text-text-dim">
+
+Coach evaluation
+
+</div>
+
+</div>
+
+<div class="char-attr bg-white/10 border border-white/20 rounded-md p-4 transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
+
+<div class="char-label text-xs text-text-light uppercase tracking-wide font-semibold mb-2">
+
+Resilience Context
+
+</div>
+
+<div class="char-score text-text-main font-semibold text-base mb-1">
+
+"First-generation university student"
+
+</div>
+
+<div class="mini-note text-xs text-text-dim">
+
+Context tag (confidential)
+
+</div>
+
+</div>
+
+</div>
+
+<div class="mini-note text-xs text-text-dim leading-relaxed mt-3">
+
+All character data is anonymized before third-party display.
+
+</div>
+
+</section>
+
+<!-- ECONOMIC FOOTPRINT -->
+
+<section class="section-card bg-bg-card border border-white/20 rounded-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+<div class="section-header flex justify-between items-start mb-4 flex-wrap gap-2">
+
+<div class="section-title font-heading text-sm font-semibold text-accent uppercase tracking-wide flex items-center gap-2">
+
+<div class="w-1 h-4 bg-accent rounded-full"></div>
+
+<span>Economic Footprint</span>
+
+</div>
+
+<div class="section-subtxt text-xs text-text-light leading-relaxed">
+
+DirhamX • Work Value • Funding Readiness
+
+</div>
+
+</div>
+
+<div class="character-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm leading-relaxed">
+
+<div class="char-attr bg-white/10 border border-white/20 rounded-md p-4">
+
+<div class="char-label text-xs text-text-light uppercase tracking-wide font-semibold mb-2">
+
+Total Earnings
+
+</div>
+
+<div class="char-score text-text-main font-semibold text-base">
+
+2,400 DirhamX credits
+
+</div>
+
+</div>
+
+<div class="char-attr bg-white/10 border border-white/20 rounded-md p-4">
+
+<div class="char-label text-xs text-text-light uppercase tracking-wide font-semibold mb-2">
+
+Project Funding Received
+
+</div>
+
+<div class="char-score text-text-main font-semibold text-base">
+
+500 DirhamX (2 projects)
+
+</div>
+
+</div>
+
+<div class="char-attr bg-white/10 border border-white/20 rounded-md p-4">
+
+<div class="char-label text-xs text-text-light uppercase tracking-wide font-semibold mb-2">
+
+Repayment / Completion Rate
+
+</div>
+
+<div class="char-score text-text-main font-semibold text-base">
+
+100%
+
+</div>
+
+</div>
+
+<div class="char-attr bg-white/10 border border-white/20 rounded-md p-4">
+
+<div class="char-label text-xs text-text-light uppercase tracking-wide font-semibold mb-2">
+
+Eligible For
+
+</div>
+
+<div class="char-score text-text-main font-semibold text-base">
+
+Micro-fund Tier 2 (≤ RM2,000)
+
+</div>
+
+</div>
+
+</div>
+
+<div class="mini-note text-xs text-text-dim leading-relaxed mt-3">
+
+SMEs and sponsors can instantly gauge payout reliability and grant readiness.
+
+</div>
+
+</section>
+
+<!-- NEXT TRAJECTORY -->
+
+<section class="section-card bg-bg-card border border-white/20 rounded-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+<div class="section-header flex justify-between items-start mb-4 flex-wrap gap-2">
+
+<div class="section-title font-heading text-sm font-semibold text-accent uppercase tracking-wide flex items-center gap-2">
+
+<div class="w-1 h-4 bg-accent rounded-full"></div>
+
+<span>Next Trajectory</span>
+
+</div>
+
+<div class="section-subtxt text-xs text-text-light leading-relaxed">
+
+AI-Generated Roadmap
+
+</div>
+
+</div>
+
+<div class="trajectory-block grid gap-4 text-sm leading-relaxed">
+
+<div class="trajectory-goal font-semibold text-text-main py-3 px-3 bg-accent/10 rounded-md border-l-4 border-accent">
+
+🎯 Goal: Become a certified Digital Marketer within 18 months
+
+</div>
+
+<div>
+
+🧭 Recommended Next Steps:
+
+<ol class="list-decimal ml-5 my-2 text-text-main">
+
+<li class="my-1">Complete "Marketing Analytics 101" (DX Talent LMS)</li>
+
+<li class="my-1">Apply for apprenticeship with verified partner (TruID job ID #MKT-483)</li>
+
+<li class="my-1">Request mentor match from "Creative Futures" network</li>
+
+</ol>
+
+</div>
+
+<div>
+
+<div class="mini-note text-xs text-text-dim mb-2">Progress to next milestone</div>
+
+<div class="progress-bar-wrap w-full bg-slate-400/20 rounded-full h-3 overflow-hidden border border-white/10 mt-2">
+
+<div class="progress-bar-inner bg-gradient-to-r from-primary to-accent h-full w-[45%] rounded-full relative overflow-hidden">
+
+</div>
+
+</div>
+
+<div class="mini-note text-xs text-text-dim mt-2">
+
+45% complete
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER / TRUST LAYER -->
+
+<section class="footer-card text-xs leading-relaxed text-text-dim border-t border-white/20 pt-6 mt-4 grid gap-3">
+
+<div class="footer-row-top text-text-main text-sm font-semibold flex items-center gap-2">
+
+<span>✅</span>
+
+<span>"This Talent Passport is TruID-verified."</span>
+
+</div>
+
+<div class="mini-note text-xs text-text-dim">
+
+Data integrity secured via TruID Ledger. Individual owns data. DX Talent only certifies trustworthiness.
+
+</div>
+
+<div class="footer-meta flex flex-wrap gap-4 lg:gap-8">
+
+<div class="footer-meta-item min-w-max">
+
+<span class="text-text-light">Attestations:</span>
+
+Employers (2) · Mentors (3) · System Logs (17)
+
+</div>
+
+<div class="footer-meta-item min-w-max">
+
+<span class="text-text-light">Version:</span> 1.0
+
+</div>
+
+<div class="footer-meta-item min-w-max">
+
+<span class="text-text-light">Timestamp:</span> 2025-10-28T09:20Z
+
+</div>
+
+<div class="footer-meta-item min-w-max">
+
+<span class="text-text-light">Issued by:</span> DX Talent™ · Powered by DirhamX
+
+</div>
+
+</div>
+
+</section>
+
+</section>
+
+</main>
+
+</body>
+
+</html>
